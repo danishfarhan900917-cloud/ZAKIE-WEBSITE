@@ -1,77 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#07070a">
 <title>ZAKIE — Digital Identity</title>
-<meta name="description" content="ZAKIE — BCA student, tech enthusiast and future technical expert.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050505;--panel:#0b0a0b;--pink:#ff1689;--pink2:#ff66ba;--white:#f8f5f8;--muted:#89848a;--line:#242025}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
-body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:50}
-a{color:inherit;text-decoration:none}.wrap{width:min(1160px,90%);margin:auto}
-nav{height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;z-index:40;background:rgba(5,5,5,.76);backdrop-filter:blur(18px)}
-.navin{width:min(1160px,90%);margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.13em}.mark{width:31px;height:31px;border-radius:50%;background:var(--pink);color:#050505;display:grid;place-items:center;font-size:13px}
-.navlinks{display:flex;gap:30px;font:10px "DM Mono";color:#89848a;text-transform:uppercase}.navlinks a:hover{color:var(--pink2)}.connect{border:1px solid #3a343b;border-radius:100px;padding:10px 15px;font:10px "DM Mono";transition:.25s}.connect:hover{border-color:var(--pink);color:var(--pink2)}
-.hero{min-height:calc(100vh - 74px);display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center;padding:65px 0 90px;position:relative}
-.hero:before{content:"";position:absolute;width:520px;height:520px;background:var(--pink);filter:blur(170px);opacity:.07;right:-180px;top:0;pointer-events:none}
-.kicker{font:10px "DM Mono";letter-spacing:.2em;color:var(--pink2);text-transform:uppercase;margin-bottom:24px}.hero h1{font-family:"Space Grotesk";font-size:clamp(70px,11vw,150px);line-height:.79;letter-spacing:-.075em;margin:0}.hero h1 span{color:var(--pink)}.lead{max-width:610px;color:#aaa;font-size:17px;line-height:1.75;margin:30px 0}
-.buttons{display:flex;gap:10px;flex-wrap:wrap}.btn{font-size:11px;font-weight:700;padding:14px 18px;border-radius:8px;border:1px solid #302a30;transition:.25s}.btn.primary{background:var(--pink);border-color:var(--pink);color:#070507}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,22,137,.16)}
-.visual{height:590px;border:1px solid #2b252b;border-radius:24px;overflow:hidden;position:relative;background:radial-gradient(circle at 75% 20%,rgba(255,22,137,.13),transparent 30%),linear-gradient(145deg,#141015,#070607 62%);box-shadow:0 40px 100px #000}
-.visual .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:46px 46px;opacity:.12;mask-image:linear-gradient(to bottom,black,transparent)}
-.bigz{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);font:700 310px/1 "Space Grotesk";letter-spacing:-.14em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.16)}
-.ring{position:absolute;width:380px;height:380px;border:1px solid rgba(255,22,137,.42);border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%) rotate(-25deg)}.ring:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--pink);left:7%;top:18%;box-shadow:0 0 28px 9px rgba(255,22,137,.5)}
-.info{position:absolute;background:rgba(8,7,8,.78);border:1px solid #373037;border-radius:12px;padding:14px 16px;backdrop-filter:blur(16px);box-shadow:0 18px 50px rgba(0,0,0,.35)}.info small{display:block;color:#777;font:9px "DM Mono";text-transform:uppercase;letter-spacing:.15em;margin-bottom:7px}.info b{font-size:15px}.one{top:25px;left:25px}.two{right:25px;bottom:25px}.three{right:25px;top:125px}.pink{color:var(--pink2)}
-.section{padding:120px 0;border-top:1px solid var(--line)}.eyebrow{font:10px "DM Mono";color:var(--pink2);letter-spacing:.2em;text-transform:uppercase}.title{font:700 clamp(44px,7vw,82px)/.9 "Space Grotesk";letter-spacing:-.065em;margin:15px 0 50px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}.about p{font-size:18px;line-height:1.85;color:#aaa;margin:0}.facts{margin-top:35px;display:grid;grid-template-columns:1fr 1fr}.fact{padding:18px 0;border-top:1px solid var(--line)}.fact span{display:block;color:#666;font:9px "DM Mono";text-transform:uppercase;margin-bottom:8px}.fact b{font-size:14px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.skill{min-height:200px;padding:27px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#100d10,#080708);transition:.3s}.skill:hover{transform:translateY(-6px);border-color:#60204a}.skill .num{font:10px "DM Mono";color:var(--pink2)}.skill h3{font:600 25px "Space Grotesk";margin:45px 0 10px}.skill p{font-size:13px;line-height:1.6;color:#777;margin:0}
-.gallery{display:grid;grid-template-columns:1.35fr .65fr;gap:13px}.shot{height:410px;border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative;background:radial-gradient(circle at 65% 30%,rgba(255,22,137,.25),transparent 28%),linear-gradient(135deg,#171117,#080708)}.shot.big{height:560px}.shot:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.75))}.ghost{position:absolute;right:-25px;bottom:-60px;font:700 210px "Space Grotesk";color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.12)}.label{position:absolute;z-index:2;left:22px;bottom:20px;font:10px "DM Mono";color:#aaa;letter-spacing:.1em}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}.contact h2{font:700 clamp(52px,8vw,100px)/.86 "Space Grotesk";letter-spacing:-.07em;margin:15px 0 25px}.contact p{color:#888;line-height:1.7}.socials{display:grid;grid-template-columns:1fr 1fr;gap:10px}.social{padding:17px;border:1px solid var(--line);border-radius:9px;font:10px "DM Mono";text-transform:uppercase;display:flex;justify-content:space-between;transition:.25s}.social:hover{border-color:#6b2450;color:var(--pink2)}
-footer{border-top:1px solid var(--line);padding:28px 0;color:#555;font:9px "DM Mono";display:flex;justify-content:space-between}
-.reveal{animation:rise .8s ease both}.delay{animation-delay:.16s}@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;gap:35px;padding:55px 0 75px}.hero h1{font-size:clamp(67px,19vw,105px)}.visual{height:455px}.bigz{font-size:180px}.ring{width:290px;height:290px}.about,.contact{grid-template-columns:1fr;gap:35px}.skills{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.shot,.shot.big{height:390px}.section{padding:85px 0}.socials{grid-template-columns:1fr 1fr}.title{margin-bottom:35px}}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap');
+:root{--pink:#ff2d8d;--pink2:#ff6ab5;--bg:#060608;--card:rgba(255,255,255,.055);--line:rgba(255,255,255,.11);--muted:#a7a7b0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:#fff;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 10%,rgba(255,45,141,.13),transparent 30%),radial-gradient(circle at 10% 70%,rgba(255,45,141,.07),transparent 28%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));z-index:20;padding:12px 16px;border:1px solid var(--line);border-radius:22px;background:rgba(8,8,11,.68);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Manrope;font-weight:800;letter-spacing:.18em}.logo b{color:var(--pink)}
+.links{display:flex;gap:22px;font-size:12px;color:#c9c9d0}.links a:hover{color:#fff}
+.cta{padding:10px 15px;border-radius:14px;background:#fff;color:#09090b;font-size:12px;font-weight:800}
+.hero{min-height:100vh;display:grid;place-items:center;padding:130px 22px 70px;position:relative}
+.hero-inner{width:min(1120px,100%);display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.kicker{color:var(--pink2);font-size:12px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;margin-bottom:18px}
+h1{font-family:Manrope;font-size:clamp(60px,10vw,142px);line-height:.84;letter-spacing:-.075em}
+h1 span{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
+.lead{max-width:570px;color:#b9b9c1;font-size:16px;line-height:1.75;margin:26px 0 30px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:14px 20px;border-radius:15px;font-weight:800;font-size:13px;border:1px solid var(--line)}.btn.primary{background:var(--pink);border-color:var(--pink)}.btn:hover{transform:translateY(-2px)}
+.hero-card{height:590px;border-radius:32px;border:1px solid var(--line);overflow:hidden;position:relative;background:linear-gradient(145deg,#19131a,#08080a 55%,#160b12);box-shadow:0 30px 90px rgba(0,0,0,.55)}
+.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.88))}
+.hero-photo{width:100%;height:100%;object-fit:cover;opacity:.86}
+.photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:35px;background:radial-gradient(circle at 50% 25%,rgba(255,45,141,.24),transparent 32%),linear-gradient(145deg,#171218,#08080a)}
+.photo-placeholder .initial{font-family:Manrope;font-size:170px;font-weight:800;line-height:1;color:rgba(255,255,255,.08)}
+.card-label{position:absolute;left:24px;right:24px;bottom:24px;z-index:2;display:flex;justify-content:space-between;align-items:end}.card-label small{color:#aaa;font-size:10px;letter-spacing:.18em}.card-label strong{display:block;font-family:Manrope;font-size:26px;margin-top:4px}.badge{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:10px 12px;border-radius:13px;font-size:11px}
+section{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:100px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.eyebrow{color:var(--pink2);font-size:11px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;margin-bottom:10px}.section-head h2{font-family:Manrope;font-size:clamp(34px,5vw,62px);letter-spacing:-.055em}.section-head p{max-width:420px;color:var(--muted);line-height:1.65;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.box{border:1px solid var(--line);background:var(--card);border-radius:24px;padding:26px;min-height:190px;transition:.25s}.box:hover{transform:translateY(-5px);border-color:rgba(255,45,141,.45);background:rgba(255,45,141,.06)}.num{font-size:11px;color:var(--pink2);letter-spacing:.15em}.box h3{font-family:Manrope;font-size:23px;margin:30px 0 10px}.box p{color:var(--muted);font-size:13px;line-height:1.7}
+.tech{display:grid;grid-template-columns:1fr 1fr;gap:14px}.techbox{padding:34px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(255,45,141,.10),rgba(255,255,255,.035))}.techbox h3{font-size:30px;font-family:Manrope}.techbox p{color:var(--muted);line-height:1.7;margin:13px 0 25px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:9px 12px;border-radius:999px;border:1px solid var(--line);font-size:11px;color:#ddd}
+.gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-auto-rows:260px;gap:14px}.tile{border-radius:25px;border:1px solid var(--line);overflow:hidden;position:relative;background:linear-gradient(145deg,#1c1119,#0a090b)}.tile:first-child{grid-row:span 2}.tile:before{content:"PHOTO";position:absolute;inset:0;display:grid;place-items:center;font-size:12px;letter-spacing:.35em;color:rgba(255,255,255,.28)}.tile .overlay{position:absolute;left:18px;bottom:16px;font-size:11px;letter-spacing:.14em;color:#ddd}
+.video{border:1px solid var(--line);border-radius:30px;overflow:hidden;min-height:430px;background:radial-gradient(circle at 50% 40%,rgba(255,45,141,.20),transparent 35%),#09090b;display:grid;place-items:center;text-align:center;padding:35px}.play{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--pink);font-size:25px;margin:0 auto 20px}.video h3{font-family:Manrope;font-size:34px}.video p{color:var(--muted);max-width:500px;line-height:1.7;margin:10px auto 20px}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}.contact-card{border:1px solid var(--line);border-radius:26px;padding:30px;background:var(--card)}.contact-card h3{font-family:Manrope;font-size:30px;margin-bottom:18px}.contact a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.contact a:hover{color:var(--pink2)}.qr{min-height:250px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,rgba(255,45,141,.16),transparent 55%),var(--card)}
+footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;color:#777;font-size:11px;letter-spacing:.08em}
+.reveal{animation:up .8s ease both}@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@media(max-width:800px){.links{display:none}.hero-inner,.tech,.contact{grid-template-columns:1fr}.hero{padding-top:120px}.hero-card{height:500px}.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr;grid-auto-rows:240px}.tile:first-child{grid-row:span 1}.section-head{display:block}.section-head p{margin-top:15px}.nav{padding:10px 12px}}
 </style>
 </head>
 <body>
-<nav><div class="navin"><a class="brand" href="#top"><span class="mark">Z</span>ZAKIE</a><div class="navlinks"><a href="#about">About</a><a href="#tech">Tech</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div><a class="connect" href="#contact">CONNECT ↗</a></div></nav>
+<nav class="nav">
+  <a class="logo" href="#">ZA<span>K</span>IE</a>
+  <div class="links"><a href="#about">ABOUT</a><a href="#tech">TECH</a><a href="#gallery">GALLERY</a><a href="#video">VIDEO</a><a href="#contact">CONTACT</a></div>
+  <a class="cta" href="#contact">CONNECT</a>
+</nav>
 
-<main id="top">
-<section class="hero wrap">
-<div class="reveal">
-<div class="kicker">Personal identity / 2026</div>
-<h1>I'M <span>ZAKIE</span></h1>
-<p class="lead">BCA student, tech enthusiast and future technical expert. I’m learning computers, exploring technology and building my skills one project at a time.</p>
-<div class="buttons"><a class="btn primary" href="#about">ENTER MY WORLD ↓</a><a class="btn" href="#gallery">EXPLORE ↗</a></div>
-</div>
-<div class="visual reveal delay"><div class="grid"></div><div class="ring"></div><div class="bigz">Z</div>
-<div class="info one"><small>Currently</small><b><span class="pink">BCA</span><br>Student</b></div>
-<div class="info three"><small>Mindset</small><b>LEARN / BUILD</b></div>
-<div class="info two"><small>Goal</small><b class="pink">TECH EXPERT</b></div>
-</div>
+<header class="hero">
+  <div class="hero-inner reveal">
+    <div>
+      <div class="kicker">Digital identity / 2026</div>
+      <h1>I'M<br><span>ZAKIE</span></h1>
+      <p class="lead">BCA student. Tech enthusiast. Building skills, exploring computers and creating a future in technology.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#about">EXPLORE PROFILE ↘</a>
+        <a class="btn" href="https://www.instagram.com/danishzakie143/" target="_blank">INSTAGRAM ↗</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="photo-placeholder"><div class="initial">Z</div></div>
+      <div class="card-label"><div><small>NAME</small><strong>ZAKIE</strong></div><div class="badge">BCA • TECH</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="section-head"><div><div class="eyebrow">01 / Profile</div><h2>More than a<br>student.</h2></div><p>A clean digital space for the person behind the name — interests, education, goals and the things I'm building.</p></div>
+  <div class="grid">
+    <div class="box"><div class="num">01 — EDUCATION</div><h3>BCA Student</h3><p>Bachelor of Computer Applications student, focused on learning practical computer and technology skills.</p></div>
+    <div class="box"><div class="num">02 — DIRECTION</div><h3>Tech Expert</h3><p>Long-term goal: become highly skilled in technology and keep growing with the computer world.</p></div>
+    <div class="box"><div class="num">03 — STYLE</div><h3>Pink Energy</h3><p>Minimal black, sharp typography and a signature pink accent — built to feel cinematic and modern.</p></div>
+  </div>
 </section>
 
-<section class="section" id="about"><div class="wrap"><div class="eyebrow">01 — About</div><div class="about"><div><h2 class="title">CURIOUS.<br>TECH-FOCUSED.<br><span class="pink">ZAKIE.</span></h2></div><div><p>I’m pursuing a Bachelor of Computer Application and I’m deeply interested in computers and technology. This website is my digital identity — a place for my journey, interests and future projects.</p><div class="facts"><div class="fact"><span>Education</span><b>Bachelor of Computer Application</b></div><div class="fact"><span>Focus</span><b>Computers & Technology</b></div><div class="fact"><span>Current</span><b>BCA Student</b></div><div class="fact"><span>Ambition</span><b>Technical Expert</b></div></div></div></div></div></section>
+<section id="tech">
+  <div class="section-head"><div><div class="eyebrow">02 / Interests</div><h2>TECH<br>MODE.</h2></div><p>Areas that fit the journey: computers, coding, digital tools, problem solving and continuous learning.</p></div>
+  <div class="tech">
+    <div class="techbox"><h3>Computer × Code</h3><p>Learning the foundations of programming, software and the systems behind modern digital products.</p><div class="chips"><span class="chip">Programming</span><span class="chip">Web</span><span class="chip">Software</span><span class="chip">Problem Solving</span></div></div>
+    <div class="techbox"><h3>Always Learning</h3><p>Every project is a chance to understand something new — from classroom concepts to real-world digital work.</p><div class="chips"><span class="chip">BCA</span><span class="chip">Technology</span><span class="chip">Projects</span><span class="chip">Growth</span></div></div>
+  </div>
+</section>
 
-<section class="section" id="tech"><div class="wrap"><div class="eyebrow">02 — Tech</div><h2 class="title">THINGS I WANT<br>TO <span class="pink">MASTER.</span></h2><div class="skills">
-<div class="skill"><span class="num">01 / FOUNDATION</span><h3>Computer Science</h3><p>Building strong fundamentals and understanding how digital systems work.</p></div>
-<div class="skill"><span class="num">02 / BUILD</span><h3>Programming</h3><p>Turning ideas into useful programs, experiments and projects.</p></div>
-<div class="skill"><span class="num">03 / FUTURE</span><h3>Technical Skills</h3><p>Exploring modern tools and technologies for a technical career.</p></div>
-</div></div></section>
+<section id="gallery">
+  <div class="section-head"><div><div class="eyebrow">03 / Visuals</div><h2>MY<br>WORLD.</h2></div><p>Replace these premium placeholders with your own portraits, campus shots and favourite moments.</p></div>
+  <div class="gallery"><div class="tile"><div class="overlay">PORTRAIT / ZAKIE</div></div><div class="tile"><div class="overlay">CAMPUS</div></div><div class="tile"><div class="overlay">LIFE / 2026</div></div></div>
+</section>
 
-<section class="section" id="gallery"><div class="wrap"><div class="eyebrow">03 — Gallery</div><h2 class="title">MY <span class="pink">WORLD.</span></h2><div class="gallery"><div class="shot big"><div class="ghost">Z</div><div class="label">PERSONAL / 01 — ZAKIE</div></div><div class="shot"><div class="ghost">01</div><div class="label">TECH / 02 — LEARN & BUILD</div></div></div><p style="color:#666;font:10px 'DM Mono';margin-top:15px">VISUAL GALLERY — ADD MORE PHOTOS TO THIS SPACE WHEN READY.</p></div></section>
+<section id="video">
+  <div class="section-head"><div><div class="eyebrow">04 / Motion</div><h2>VIDEO<br>BASE.</h2></div><p>Put your cinematic intro, reel or personal montage here.</p></div>
+  <div class="video">
+    <div><div class="play">▶</div><h3>ZAKIE / MOTION</h3><p>Your uploaded video can replace this screen. The layout is already responsive for mobile and desktop.</p><a class="btn primary" href="#contact">LET'S CONNECT</a></div>
+  </div>
+</section>
 
-<section class="section" id="contact"><div class="wrap contact"><div><div class="eyebrow">04 — Contact</div><h2>LET'S<br><span class="pink">CONNECT.</span></h2><p>Tech conversations, collaborations, ideas or simply saying hello.</p></div><div class="socials">
-<a class="social" href="https://www.instagram.com/danishzakie143/" target="_blank"><span>Instagram</span><span>↗</span></a>
-<a class="social" href="https://www.facebook.com/share/1EoEHpe1sb/" target="_blank"><span>Facebook</span><span>↗</span></a>
-<a class="social" href="https://youtube.com/@danishislamic786" target="_blank"><span>YouTube</span><span>↗</span></a>
-<a class="social" href="https://x.com/BGMIGAME9728" target="_blank"><span>X</span><span>↗</span></a>
-<a class="social" href="https://www.snapchat.com/add/dzakie21" target="_blank"><span>Snapchat</span><span>↗</span></a>
-<a class="social" href="mailto:danishfarhan900917@gmail.com"><span>Email</span><span>↗</span></a>
-</div></div></section>
-</main>
-<footer class="wrap"><span>© 2026 ZAKIE</span><span>BUILT WITH CURIOSITY × CODE</span></footer>
+<section id="contact">
+  <div class="section-head"><div><div class="eyebrow">05 / Connect</div><h2>FIND<br>ZAKIE.</h2></div><p>Social links and direct contact, all in one place.</p></div>
+  <div class="contact">
+    <div class="contact-card">
+      <h3>Contact</h3>
+      <a href="tel:+919728288182">📞 +91 97282 88182</a>
+      <a href="mailto:danishfarhan900917@gmail.com">✉ danishfarhan900917@gmail.com</a>
+      <a href="https://www.instagram.com/danishzakie143/" target="_blank">◎ Instagram / @danishzakie143</a>
+      <a href="https://www.facebook.com/share/1EoEHpe1sb/" target="_blank">f Facebook</a>
+      <a href="https://www.snapchat.com/add/dzakie21" target="_blank">◉ Snapchat / dzakie21</a>
+      <a href="https://x.com/BGMIGAME9728" target="_blank">𝕏 X / BGMIGAME9728</a>
+      <a href="https://youtube.com/@danishislamic786" target="_blank">▶ YouTube / danishislamic786</a>
+      <a href="https://t.me/Danishzakie" target="_blank">✈ Telegram / Danishzakie</a>
+    </div>
+    <div class="contact-card qr"><div><div class="eyebrow">SCAN / CONNECT</div><h3>QR CODE</h3><p style="color:#777;font-size:12px;margin-top:8px">Upload your QR image here as <b>qr.png</b> to show it automatically.</p></div></div>
+  </div>
+</section>
+
+<footer>© 2026 ZAKIE — BUILT WITH PURPOSE • STUDENT / TECH ENTHUSIAST</footer>
 </body>
 </html>
