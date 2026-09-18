@@ -3,117 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#07070a">
+<meta name="theme-color" content="#070707">
 <title>ZAKIE — Digital Identity</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap');
-:root{--pink:#ff2d8d;--pink2:#ff6ab5;--bg:#060608;--card:rgba(255,255,255,.055);--line:rgba(255,255,255,.11);--muted:#a7a7b0}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:#fff;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 10%,rgba(255,45,141,.13),transparent 30%),radial-gradient(circle at 10% 70%,rgba(255,45,141,.07),transparent 28%);z-index:-1}
-a{color:inherit;text-decoration:none}
-.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));z-index:20;padding:12px 16px;border:1px solid var(--line);border-radius:22px;background:rgba(8,8,11,.68);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:Manrope;font-weight:800;letter-spacing:.18em}.logo b{color:var(--pink)}
-.links{display:flex;gap:22px;font-size:12px;color:#c9c9d0}.links a:hover{color:#fff}
-.cta{padding:10px 15px;border-radius:14px;background:#fff;color:#09090b;font-size:12px;font-weight:800}
-.hero{min-height:100vh;display:grid;place-items:center;padding:130px 22px 70px;position:relative}
-.hero-inner{width:min(1120px,100%);display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-.kicker{color:var(--pink2);font-size:12px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;margin-bottom:18px}
-h1{font-family:Manrope;font-size:clamp(60px,10vw,142px);line-height:.84;letter-spacing:-.075em}
-h1 span{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
-.lead{max-width:570px;color:#b9b9c1;font-size:16px;line-height:1.75;margin:26px 0 30px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:14px 20px;border-radius:15px;font-weight:800;font-size:13px;border:1px solid var(--line)}.btn.primary{background:var(--pink);border-color:var(--pink)}.btn:hover{transform:translateY(-2px)}
-.hero-card{height:590px;border-radius:32px;border:1px solid var(--line);overflow:hidden;position:relative;background:linear-gradient(145deg,#19131a,#08080a 55%,#160b12);box-shadow:0 30px 90px rgba(0,0,0,.55)}
-.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.88))}
-.hero-photo{width:100%;height:100%;object-fit:cover;opacity:.86}
-.photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:35px;background:radial-gradient(circle at 50% 25%,rgba(255,45,141,.24),transparent 32%),linear-gradient(145deg,#171218,#08080a)}
-.photo-placeholder .initial{font-family:Manrope;font-size:170px;font-weight:800;line-height:1;color:rgba(255,255,255,.08)}
-.card-label{position:absolute;left:24px;right:24px;bottom:24px;z-index:2;display:flex;justify-content:space-between;align-items:end}.card-label small{color:#aaa;font-size:10px;letter-spacing:.18em}.card-label strong{display:block;font-family:Manrope;font-size:26px;margin-top:4px}.badge{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:10px 12px;border-radius:13px;font-size:11px}
-section{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:100px 0}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.eyebrow{color:var(--pink2);font-size:11px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;margin-bottom:10px}.section-head h2{font-family:Manrope;font-size:clamp(34px,5vw,62px);letter-spacing:-.055em}.section-head p{max-width:420px;color:var(--muted);line-height:1.65;font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.box{border:1px solid var(--line);background:var(--card);border-radius:24px;padding:26px;min-height:190px;transition:.25s}.box:hover{transform:translateY(-5px);border-color:rgba(255,45,141,.45);background:rgba(255,45,141,.06)}.num{font-size:11px;color:var(--pink2);letter-spacing:.15em}.box h3{font-family:Manrope;font-size:23px;margin:30px 0 10px}.box p{color:var(--muted);font-size:13px;line-height:1.7}
-.tech{display:grid;grid-template-columns:1fr 1fr;gap:14px}.techbox{padding:34px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(255,45,141,.10),rgba(255,255,255,.035))}.techbox h3{font-size:30px;font-family:Manrope}.techbox p{color:var(--muted);line-height:1.7;margin:13px 0 25px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:9px 12px;border-radius:999px;border:1px solid var(--line);font-size:11px;color:#ddd}
-.gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-auto-rows:260px;gap:14px}.tile{border-radius:25px;border:1px solid var(--line);overflow:hidden;position:relative;background:linear-gradient(145deg,#1c1119,#0a090b)}.tile:first-child{grid-row:span 2}.tile:before{content:"PHOTO";position:absolute;inset:0;display:grid;place-items:center;font-size:12px;letter-spacing:.35em;color:rgba(255,255,255,.28)}.tile .overlay{position:absolute;left:18px;bottom:16px;font-size:11px;letter-spacing:.14em;color:#ddd}
-.video{border:1px solid var(--line);border-radius:30px;overflow:hidden;min-height:430px;background:radial-gradient(circle at 50% 40%,rgba(255,45,141,.20),transparent 35%),#09090b;display:grid;place-items:center;text-align:center;padding:35px}.play{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--pink);font-size:25px;margin:0 auto 20px}.video h3{font-family:Manrope;font-size:34px}.video p{color:var(--muted);max-width:500px;line-height:1.7;margin:10px auto 20px}
-.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}.contact-card{border:1px solid var(--line);border-radius:26px;padding:30px;background:var(--card)}.contact-card h3{font-family:Manrope;font-size:30px;margin-bottom:18px}.contact a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.contact a:hover{color:var(--pink2)}.qr{min-height:250px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,rgba(255,45,141,.16),transparent 55%),var(--card)}
-footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;color:#777;font-size:11px;letter-spacing:.08em}
-.reveal{animation:up .8s ease both}@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
-@media(max-width:800px){.links{display:none}.hero-inner,.tech,.contact{grid-template-columns:1fr}.hero{padding-top:120px}.hero-card{height:500px}.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr;grid-auto-rows:240px}.tile:first-child{grid-row:span 1}.section-head{display:block}.section-head p{margin-top:15px}.nav{padding:10px 12px}}
+body{font-family:Inter,Arial,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,rgba(255,45,154,.16),transparent 28%),radial-gradient(circle at 90% 35%,rgba(255,105,190,.1),transparent 30%);z-index:-1}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1100px,92%);padding:14px 18px;border:1px solid rgba(255,255,255,.1);border-radius:22px;background:rgba(10,10,10,.72);backdrop-filter:blur(18px);display:flex;justify-content:space-between;align-items:center;z-index:10}
+.logo{font-weight:900;letter-spacing:.28em;font-size:20px}
+nav a{color:#aaa;text-decoration:none;margin-left:20px;font-size:12px;font-weight:700}
+nav a:hover{color:#ff4fb0}
+.hero{min-height:100vh;display:grid;place-items:center;padding:110px 5% 50px;position:relative}
+.hero-inner{width:min(1200px,100%);display:grid;grid-template-columns:1fr .9fr;gap:45px;align-items:center}
+.kicker{color:#ff54b5;font-size:12px;letter-spacing:.28em;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(60px,10vw,150px);line-height:.83;letter-spacing:-.08em;font-weight:900}
+h1 span{color:transparent;-webkit-text-stroke:1px #fff}
+.hero p{color:#a9a9a9;max-width:560px;line-height:1.7;margin:25px 0}
+.btn{display:inline-block;padding:14px 22px;border-radius:999px;background:#ff3fa9;color:#090909;text-decoration:none;font-weight:900;margin-right:8px;box-shadow:0 0 35px rgba(255,63,169,.22)}
+.btn.alt{background:transparent;color:#fff;border:1px solid #333}
+.hero-photo{width:100%;height:600px;object-fit:cover;border-radius:36px;border:1px solid #222;box-shadow:0 30px 100px rgba(255,35,155,.14)}
+section{width:min(1200px,90%);margin:auto;padding:90px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+.section-head h2{font-size:clamp(34px,5vw,64px);letter-spacing:-.05em}
+.muted{color:#777;font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:28px;border:1px solid #222;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02));min-height:180px}
+.card b{font-size:30px;color:#ff63ba;display:block;margin-bottom:18px}
+.card h3{margin-bottom:10px}.card p{color:#999;line-height:1.6;font-size:14px}
+.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px}
+.tile{height:330px;border-radius:28px;overflow:hidden;border:1px solid #222;position:relative;background:#111}
+.tile:nth-child(2){height:250px;margin-top:80px}.tile:nth-child(3){height:400px}
+.gallery-img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}.tile:hover .gallery-img{transform:scale(1.05)}
+.overlay{position:absolute;left:16px;bottom:16px;background:rgba(0,0,0,.62);backdrop-filter:blur(10px);padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.12em}
+.contact{border:1px solid #222;border-radius:34px;padding:38px;background:linear-gradient(120deg,rgba(255,63,169,.12),rgba(255,255,255,.03))}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.links a{color:#fff;text-decoration:none;border:1px solid #333;padding:12px 16px;border-radius:999px;font-size:13px}
+footer{text-align:center;color:#555;padding:40px;font-size:12px}
+@media(max-width:800px){nav a{display:none}.hero-inner{grid-template-columns:1fr}.hero-photo{height:520px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.tile,.tile:nth-child(2),.tile:nth-child(3){height:300px;margin:0}.gallery .tile:first-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
-<nav class="nav">
-  <a class="logo" href="#">ZA<span>K</span>IE</a>
-  <div class="links"><a href="#about">ABOUT</a><a href="#tech">TECH</a><a href="#gallery">GALLERY</a><a href="#video">VIDEO</a><a href="#contact">CONTACT</a></div>
-  <a class="cta" href="#contact">CONNECT</a>
-</nav>
+<nav><div class="logo">ZAKIE</div><div><a href="#about">ABOUT</a><a href="#tech">TECH</a><a href="#gallery">GALLERY</a><a href="#contact">CONNECT</a></div></nav>
 
 <header class="hero">
-  <div class="hero-inner reveal">
-    <div>
-      <div class="kicker">Digital identity / 2026</div>
-      <h1>I'M<br><span>ZAKIE</span></h1>
-      <p class="lead">BCA student. Tech enthusiast. Building skills, exploring computers and creating a future in technology.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#about">EXPLORE PROFILE ↘</a>
-        <a class="btn" href="https://www.instagram.com/danishzakie143/" target="_blank">INSTAGRAM ↗</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div class="photo-placeholder"><div class="initial">Z</div></div>
-      <div class="card-label"><div><small>NAME</small><strong>ZAKIE</strong></div><div class="badge">BCA • TECH</div></div>
-    </div>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="kicker">DIGITAL IDENTITY / 2026</div>
+<h1>I'M <span>ZAKIE</span></h1>
+<p>Student. BCA learner. Tech enthusiast. Building skills, chasing ideas and creating my own digital identity.</p>
+<a class="btn" href="#gallery">EXPLORE PROFILE ↗</a>
+<a class="btn alt" href="#contact">CONNECT</a>
+</div>
+<img class="hero-photo" src="IMG-20260905-WA0017.jpg" alt="ZAKIE">
+</div>
 </header>
 
 <section id="about">
-  <div class="section-head"><div><div class="eyebrow">01 / Profile</div><h2>More than a<br>student.</h2></div><p>A clean digital space for the person behind the name — interests, education, goals and the things I'm building.</p></div>
-  <div class="grid">
-    <div class="box"><div class="num">01 — EDUCATION</div><h3>BCA Student</h3><p>Bachelor of Computer Applications student, focused on learning practical computer and technology skills.</p></div>
-    <div class="box"><div class="num">02 — DIRECTION</div><h3>Tech Expert</h3><p>Long-term goal: become highly skilled in technology and keep growing with the computer world.</p></div>
-    <div class="box"><div class="num">03 — STYLE</div><h3>Pink Energy</h3><p>Minimal black, sharp typography and a signature pink accent — built to feel cinematic and modern.</p></div>
-  </div>
+<div class="section-head"><h2>01 / ABOUT</h2><div class="muted">SAME PERSON. DIFFERENT MINDSET.</div></div>
+<div class="cards">
+<div class="card"><b>20</b><h3>Student</h3><p>Currently studying Bachelor of Computer Applications.</p></div>
+<div class="card"><b>BCA</b><h3>Computer Applications</h3><p>Learning programming, systems and the technology behind modern digital products.</p></div>
+<div class="card"><b>∞</b><h3>Goal</h3><p>Become a technical expert and keep growing through real projects.</p></div>
+</div>
 </section>
 
 <section id="tech">
-  <div class="section-head"><div><div class="eyebrow">02 / Interests</div><h2>TECH<br>MODE.</h2></div><p>Areas that fit the journey: computers, coding, digital tools, problem solving and continuous learning.</p></div>
-  <div class="tech">
-    <div class="techbox"><h3>Computer × Code</h3><p>Learning the foundations of programming, software and the systems behind modern digital products.</p><div class="chips"><span class="chip">Programming</span><span class="chip">Web</span><span class="chip">Software</span><span class="chip">Problem Solving</span></div></div>
-    <div class="techbox"><h3>Always Learning</h3><p>Every project is a chance to understand something new — from classroom concepts to real-world digital work.</p><div class="chips"><span class="chip">BCA</span><span class="chip">Technology</span><span class="chip">Projects</span><span class="chip">Growth</span></div></div>
-  </div>
+<div class="section-head"><h2>02 / TECH</h2><div class="muted">LEARN • BUILD • REPEAT</div></div>
+<div class="contact"><h2>TECH IS NOT JUST AN INTEREST.</h2><p style="color:#aaa;line-height:1.8;margin-top:14px">It's the direction I'm building toward — one concept, one project and one problem at a time.</p></div>
 </section>
 
 <section id="gallery">
-  <div class="section-head"><div><div class="eyebrow">03 / Visuals</div><h2>MY<br>WORLD.</h2></div><p>Replace these premium placeholders with your own portraits, campus shots and favourite moments.</p></div>
-  <div class="gallery"><div class="tile"><div class="overlay">PORTRAIT / ZAKIE</div></div><div class="tile"><div class="overlay">CAMPUS</div></div><div class="tile"><div class="overlay">LIFE / 2026</div></div></div>
-</section>
-
-<section id="video">
-  <div class="section-head"><div><div class="eyebrow">04 / Motion</div><h2>VIDEO<br>BASE.</h2></div><p>Put your cinematic intro, reel or personal montage here.</p></div>
-  <div class="video">
-    <div><div class="play">▶</div><h3>ZAKIE / MOTION</h3><p>Your uploaded video can replace this screen. The layout is already responsive for mobile and desktop.</p><a class="btn primary" href="#contact">LET'S CONNECT</a></div>
-  </div>
+<div class="section-head"><h2>03 / GALLERY</h2><div class="muted">SELECTED MOMENTS</div></div>
+<div class="gallery">
+<div class="tile"><img class="gallery-img" src="IMG-20260905-WA0017.jpg" alt="ZAKIE"><div class="overlay">PORTRAIT / 01</div></div>
+<div class="tile"><img class="gallery-img" src="Snapchat-1138099196.jpg" alt="ZAKIE"><div class="overlay">LIFE / 02</div></div>
+<div class="tile"><img class="gallery-img" src="Snapchat-670480389.jpg" alt="ZAKIE"><div class="overlay">STYLE / 03</div></div>
+<div class="tile"><img class="gallery-img" src="IMG20260826160912.jpg" alt="ZAKIE"><div class="overlay">MOMENT / 04</div></div>
+<div class="tile"><img class="gallery-img" src="1777350131201.png" alt="ZAKIE"><div class="overlay">VISUAL / 05</div></div>
+</div>
 </section>
 
 <section id="contact">
-  <div class="section-head"><div><div class="eyebrow">05 / Connect</div><h2>FIND<br>ZAKIE.</h2></div><p>Social links and direct contact, all in one place.</p></div>
-  <div class="contact">
-    <div class="contact-card">
-      <h3>Contact</h3>
-      <a href="tel:+919728288182">📞 +91 97282 88182</a>
-      <a href="mailto:danishfarhan900917@gmail.com">✉ danishfarhan900917@gmail.com</a>
-      <a href="https://www.instagram.com/danishzakie143/" target="_blank">◎ Instagram / @danishzakie143</a>
-      <a href="https://www.facebook.com/share/1EoEHpe1sb/" target="_blank">f Facebook</a>
-      <a href="https://www.snapchat.com/add/dzakie21" target="_blank">◉ Snapchat / dzakie21</a>
-      <a href="https://x.com/BGMIGAME9728" target="_blank">𝕏 X / BGMIGAME9728</a>
-      <a href="https://youtube.com/@danishislamic786" target="_blank">▶ YouTube / danishislamic786</a>
-      <a href="https://t.me/Danishzakie" target="_blank">✈ Telegram / Danishzakie</a>
-    </div>
-    <div class="contact-card qr"><div><div class="eyebrow">SCAN / CONNECT</div><h3>QR CODE</h3><p style="color:#777;font-size:12px;margin-top:8px">Upload your QR image here as <b>qr.png</b> to show it automatically.</p></div></div>
-  </div>
+<div class="section-head"><h2>04 / CONNECT</h2><div class="muted">FIND ZAKIE ONLINE</div></div>
+<div class="contact">
+<h2>LET'S CONNECT.</h2>
+<div class="links">
+<a href="https://www.instagram.com/danishzakie143/">Instagram</a>
+<a href="https://www.facebook.com/share/1EoEHpe1sb/">Facebook</a>
+<a href="https://x.com/BGMIGAME9728">X</a>
+<a href="https://youtube.com/@danishislamic786">YouTube</a>
+<a href="https://t.me/Danishzakie">Telegram</a>
+<a href="mailto:danishfarhan900917@gmail.com">Email</a>
+</div>
+</div>
 </section>
-
-<footer>© 2026 ZAKIE — BUILT WITH PURPOSE • STUDENT / TECH ENTHUSIAST</footer>
+<footer>© 2026 ZAKIE — DIGITAL IDENTITY</footer>
 </body>
 </html>
