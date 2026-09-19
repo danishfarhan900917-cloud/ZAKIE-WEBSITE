@@ -21,7 +21,8 @@ section{width:min(1200px,90%);margin:auto;padding:110px 0}.head{display:flex;jus
 .video{border:1px solid #ffffff15;border-radius:36px;overflow:hidden;background:#08070a;box-shadow:0 30px 100px #000}.videoWrap{position:relative;aspect-ratio:16/9;background:#000}.video video{width:100%;height:100%;object-fit:cover;display:block}.videoLabel{position:absolute;left:20px;bottom:20px;padding:10px 14px;border-radius:999px;background:#000a;backdrop-filter:blur(10px);font-size:10px;font-weight:900;letter-spacing:.15em}
 .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.tile{grid-column:span 4;height:360px;border-radius:28px;overflow:hidden;border:1px solid #ffffff15;position:relative;background:#111;transform:translateY(30px);opacity:0;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}.tile.show{transform:none;opacity:1}.tile:nth-child(1),.tile:nth-child(6){grid-column:span 6;height:500px}.tile:nth-child(2),.tile:nth-child(7){height:420px}.tile:nth-child(4){height:430px}.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.tile:hover img{transform:scale(1.08)}.tile:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,#000b)}.tag{position:absolute;z-index:1;left:16px;bottom:16px;font-size:10px;font-weight:900;letter-spacing:.15em;color:#fff}
 .contact{border:1px solid #ffffff15;border-radius:35px;padding:42px;background:linear-gradient(120deg,#ff3fa915,#ffffff03)}.contact h2{font-size:clamp(35px,6vw,70px);margin:0;letter-spacing:-.06em}.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.links a{padding:12px 17px;border:1px solid #ffffff18;border-radius:999px;color:#fff;text-decoration:none;font-size:12px;font-weight:800;transition:.25s}.links a:hover{background:#ff3fa9;color:#080508;transform:translateY(-3px)}
-footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spacing:.15em}.reveal{opacity:0;transform:translateY(35px);transition:1s}.reveal.show{opacity:1;transform:none}
+footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spacing:.15em}.reveal{opacity:0;transform:translate3d(0,90px,0) scale(.82) rotateX(10deg);filter:blur(12px);transition:opacity .9s ease,transform 1.05s cubic-bezier(.16,1,.3,1),filter .9s ease;transform-origin:center}.reveal.from-left{transform:translate3d(-42vw,30px,0) scale(.72) rotateY(28deg) rotateZ(-2deg);transform-origin:left center}.reveal.from-right{transform:translate3d(42vw,30px,0) scale(.72) rotateY(-28deg) rotateZ(2deg);transform-origin:right center}.reveal.show{opacity:1;transform:translate3d(0,0,0) scale(1) rotateX(0) rotateY(0) rotateZ(0);filter:blur(0)}
+.tile{will-change:transform,opacity;perspective:1000px}.tile.show{animation:cinematicIn .95s cubic-bezier(.16,1,.3,1) both}.tile:nth-child(odd).show{animation-name:cinematicLeft}.tile:nth-child(even).show{animation-name:cinematicRight}@keyframes cinematicIn{0%{opacity:0;transform:translate3d(0,140px,-500px) scale(.55) rotateX(18deg);filter:blur(16px)}70%{opacity:1;transform:translate3d(0,-8px,20px) scale(1.02) rotateX(-2deg);filter:blur(0)}100%{opacity:1;transform:translate3d(0,0,0) scale(1) rotateX(0)}}@keyframes cinematicLeft{0%{opacity:0;transform:translate3d(-55vw,50px,-350px) scale(.55) rotateY(32deg);filter:blur(15px)}70%{opacity:1;transform:translate3d(8px,-5px,20px) scale(1.02) rotateY(-2deg);filter:blur(0)}100%{opacity:1;transform:none}}@keyframes cinematicRight{0%{opacity:0;transform:translate3d(55vw,50px,-350px) scale(.55) rotateY(-32deg);filter:blur(15px)}70%{opacity:1;transform:translate3d(-8px,-5px,20px) scale(1.02) rotateY(2deg);filter:blur(0)}100%{opacity:1;transform:none}}
 @media(max-width:800px){nav{top:10px}nav a{display:none}.heroGrid{grid-template-columns:1fr;gap:35px}.heroMedia img{height:520px;transform:none}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.tile,.tile:nth-child(n),.tile:nth-child(1),.tile:nth-child(6){grid-column:span 1;height:310px}.tile:nth-child(1),.tile:nth-child(6){grid-column:1/-1;height:430px}section{padding:75px 0}.head{display:block}.head .muted{margin-top:10px}}
 </style>
 </head>
@@ -38,8 +39,8 @@ footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spac
 <div class="card reveal"><b>∞</b><h3>My Direction</h3><p>Become a technical expert through curiosity, practice, projects and continuous learning.</p></div>
 </div></section>
 <section id="tech"><div class="head reveal"><h2>02 / TECH</h2><div class="muted">LEARN • BUILD • REPEAT</div></div><div class="contact reveal"><h2>TECH IS THE DIRECTION.</h2><p style="color:#aaa;line-height:1.8;max-width:760px">From computer concepts to real projects, every step is about understanding how things work and getting better at building them.</p></div></section>
-<section id="video"><div class="head reveal"><h2>03 / MOTION</h2><div class="muted">WATCH THE STORY</div></div><div class="video reveal"><div class="videoWrap"><video controls playsinline preload="metadata" poster="IMG-20260905-WA0017.jpg"><source src="Snapchat-1810245052.mp4" type="video/mp4"></video><div class="videoLabel">ZAKIE / MOTION</div></div></div></section>
-<section id="gallery"><div class="head reveal"><h2>04 / GALLERY</h2><div class="muted">10 SELECTED VISUALS</div></div><div class="gallery">
+<section id="video"><div class="head reveal"><h2>03 / MOTION</h2><div class="muted">SCROLL / ENTER THE STORY</div></div><div class="video reveal"><div class="videoWrap"><video controls playsinline preload="metadata" poster="IMG-20260905-WA0017.jpg"><source src="Snapchat-1810245052.mp4" type="video/mp4"></video><div class="videoLabel">ZAKIE / MOTION</div></div></div></section>
+<section id="gallery"><div class="head reveal"><h2>04 / GALLERY</h2><div class="muted">10 CINEMATIC FRAMES</div></div><div class="gallery">
 <div class="tile"><img src="IMG-20260905-WA0017.jpg" alt="ZAKIE"><span class="tag">01 / PORTRAIT</span></div>
 <div class="tile"><img src="Snapchat-1138099196.jpg" alt="ZAKIE"><span class="tag">02 / LIFE</span></div>
 <div class="tile"><img src="Snapchat-670480389.jpg" alt="ZAKIE"><span class="tag">03 / STYLE</span></div>
@@ -57,9 +58,30 @@ footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spac
 <footer>© 2026 ZAKIE — DIGITAL IDENTITY</footer>
 <script>
 const p=document.getElementById('particles');
-for(let i=0;i<45;i++){let e=document.createElement('i');e.className='p';e.style.left=Math.random()*100+'%';e.style.animationDuration=(7+Math.random()*12)+'s';e.style.animationDelay=(-Math.random()*15)+'s';e.style.transform='scale('+(0.4+Math.random()*1.4)+')';p.appendChild(e)}
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
-document.querySelectorAll('.reveal,.tile').forEach(e=>obs.observe(e));
-document.addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5)*2,y=(e.clientY/innerHeight-.5)*2;document.querySelector('.heroMedia img')?.style.setProperty('transform',`rotateY(${-x*5}deg) rotateX(${y*3}deg)`)});
+for(let i=0;i<55;i++){let e=document.createElement('i');e.className='p';e.style.left=Math.random()*100+'%';e.style.animationDuration=(6+Math.random()*13)+'s';e.style.animationDelay=(-Math.random()*15)+'s';e.style.transform='scale('+(0.4+Math.random()*1.6)+')';p.appendChild(e)}
+
+const revealItems=document.querySelectorAll('.reveal,.tile');
+revealItems.forEach((e,i)=>{if(e.classList.contains('reveal') && !e.classList.contains('from-left') && !e.classList.contains('from-right')) e.classList.add(i%2?'from-right':'from-left')});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add('show');
+  else if(e.target.classList.contains('reveal'))e.target.classList.remove('show');
+}),{threshold:.16,rootMargin:'0px 0px -8% 0px'});
+revealItems.forEach(e=>obs.observe(e));
+
+const media=document.querySelector('.heroMedia img');
+document.addEventListener('mousemove',e=>{if(!media)return;const x=(e.clientX/innerWidth-.5)*2,y=(e.clientY/innerHeight-.5)*2;media.style.transform=`rotateY(${-x*7}deg) rotateX(${y*4}deg) translateZ(8px)`});
+
+let ticking=false;
+window.addEventListener('scroll',()=>{
+ if(ticking)return;ticking=true;
+ requestAnimationFrame(()=>{
+   const vh=innerHeight;
+   document.querySelectorAll('.tile').forEach((el,i)=>{
+     const r=el.getBoundingClientRect(), center=r.top+r.height/2, d=(center-vh/2)/(vh/2);
+     if(Math.abs(d)<1.35) el.style.setProperty('--scroll-tilt',`${d*3}deg`);
+   });
+   ticking=false;
+ });
+},{passive:true});
 </script>
 </body></html>
