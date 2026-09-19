@@ -28,16 +28,18 @@ footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spac
 
 <style id="big-social-style">
 .support-title{margin:0 0 18px;font-size:clamp(22px,3vw,34px)}
-.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
-.social-card{position:relative;display:flex;align-items:center;gap:15px;min-height:96px;padding:16px;border:1px solid #ffffff18;border-radius:24px;background:linear-gradient(145deg,#ffffff0d,#ffffff03);color:#fff;text-decoration:none;overflow:hidden;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;will-change:transform}
-.social-card:before{content:"";position:absolute;width:120px;height:120px;right:-45px;top:-55px;border-radius:50%;background:#ff3fa933;filter:blur(22px)}
-.social-card:hover{transform:translateY(-9px) rotateX(4deg) rotateY(-4deg) scale(1.025);border-color:#ff4faf66;box-shadow:0 20px 55px #0009,0 0 30px #ff3fa922}
-.social-thumb{width:58px;height:58px;flex:0 0 58px;border-radius:17px;display:grid;place-items:center;font-size:25px;font-weight:900;background:linear-gradient(135deg,#ff3fa9,#ff86ca);color:#080508;box-shadow:0 8px 28px #ff3fa944;position:relative;z-index:1}
-.social-name{font-size:15px;font-weight:900;letter-spacing:.03em;position:relative;z-index:1}
-.social-sub{font-size:10px;color:#888;margin-top:5px;position:relative;z-index:1}
-.support-note{color:#888;font-size:12px;line-height:1.7;margin:0;max-width:720px}
-@media(max-width:950px){.social-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.social-grid{grid-template-columns:1fr}.social-card{min-height:88px}}
+.social-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
+.social-card{position:relative;display:flex;align-items:center;gap:24px;min-height:150px;padding:22px;border:1px solid #ffffff18;border-radius:30px;background:linear-gradient(145deg,#ffffff0d,#ffffff03);color:#fff;text-decoration:none;overflow:hidden;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;will-change:transform}
+.social-card:before{content:"";position:absolute;width:190px;height:190px;right:-70px;top:-80px;border-radius:50%;background:#ff3fa933;filter:blur(30px)}
+.social-card:hover{transform:translateY(-12px) rotateX(5deg) rotateY(-5deg) scale(1.025);border-color:#ff4faf66;box-shadow:0 25px 65px #0009,0 0 38px #ff3fa933}
+.social-thumb{width:120px;height:120px;flex:0 0 120px;border-radius:25px;display:block;object-fit:cover;object-position:center;overflow:hidden;background:#151018;box-shadow:0 10px 35px #ff3fa455;position:relative;z-index:1;border:1px solid #ffffff28}
+.social-thumb img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1),filter .4s}
+.social-card:hover .social-thumb img{transform:scale(1.13) rotate(-2deg);filter:saturate(1.15) contrast(1.05)}
+.social-name{font-size:20px;font-weight:900;letter-spacing:.03em;position:relative;z-index:1}
+.social-sub{display:block;font-size:12px;color:#888;margin-top:8px;position:relative;z-index:1}
+.support-note{color:#888;font-size:13px;line-height:1.7;margin:0;max-width:720px}
+@media(max-width:950px){.social-grid{grid-template-columns:1fr}.social-card{min-height:140px}}
+@media(max-width:560px){.social-card{min-height:125px;padding:16px;gap:16px}.social-thumb{width:92px;height:92px;flex-basis:92px;border-radius:20px}.social-name{font-size:17px}.social-sub{font-size:11px}}
 </style>
 </head>
 <body>
@@ -72,14 +74,14 @@ footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spac
 <h2>LET'S CONNECT.</h2>
 <p class="support-note">My main links and support/contact channels — presented as interactive cards with animated thumbnails.</p>
 <div class="social-grid">
-<a class="social-card" href="https://www.instagram.com/danishzakie143/" target="_blank" rel="noopener"><span class="social-thumb">◎</span><span><span class="social-name">Instagram</span><span class="social-sub">@danishzakie143</span></span></a>
-<a class="social-card" href="https://www.facebook.com/share/1EoEHpe1sb/" target="_blank" rel="noopener"><span class="social-thumb">f</span><span><span class="social-name">Facebook</span><span class="social-sub">Connect with ZAKIE</span></span></a>
-<a class="social-card" href="https://www.snapchat.com/add/dzakie21" target="_blank" rel="noopener"><span class="social-thumb">👻</span><span><span class="social-name">Snapchat</span><span class="social-sub">@dzakie21</span></span></a>
-<a class="social-card" href="https://x.com/BGMIGAME9728" target="_blank" rel="noopener"><span class="social-thumb">𝕏</span><span><span class="social-name">X</span><span class="social-sub">@BGMIGAME9728</span></span></a>
-<a class="social-card" href="https://youtube.com/@danishislamic786" target="_blank" rel="noopener"><span class="social-thumb">▶</span><span><span class="social-name">YouTube</span><span class="social-sub">@danishislamic786</span></span></a>
-<a class="social-card" href="https://t.me/Danishzakie" target="_blank" rel="noopener"><span class="social-thumb">✈</span><span><span class="social-name">Telegram</span><span class="social-sub">@Danishzakie</span></span></a>
-<a class="social-card" href="mailto:danishfarhan900917@gmail.com"><span class="social-thumb">✉</span><span><span class="social-name">Email</span><span class="social-sub">Contact ZAKIE</span></span></a>
-<a class="social-card" href="tel:+919728288182"><span class="social-thumb">☎</span><span><span class="social-name">Call</span><span class="social-sub">+91 97282 88182</span></span></a>
+<a class="social-card" href="https://www.instagram.com/danishzakie143/" target="_blank" rel="noopener"><span class="social-thumb"><img src="IMG-20260905-WA0017.jpg" alt="Instagram thumbnail"></span><span><span class="social-name">Instagram</span><span class="social-sub">@danishzakie143</span></span></a>
+<a class="social-card" href="https://www.facebook.com/share/1EoEHpe1sb/" target="_blank" rel="noopener"><span class="social-thumb"><img src="Snapchat-1138099196.jpg" alt="Facebook thumbnail"></span><span><span class="social-name">Facebook</span><span class="social-sub">Connect with ZAKIE</span></span></a>
+<a class="social-card" href="https://www.snapchat.com/add/dzakie21" target="_blank" rel="noopener"><span class="social-thumb"><img src="Snapchat-670480389.jpg" alt="Snapchat thumbnail"></span><span><span class="social-name">Snapchat</span><span class="social-sub">@dzakie21</span></span></a>
+<a class="social-card" href="https://x.com/BGMIGAME9728" target="_blank" rel="noopener"><span class="social-thumb"><img src="IMG20260826160912.jpg" alt="X thumbnail"></span><span><span class="social-name">X</span><span class="social-sub">@BGMIGAME9728</span></span></a>
+<a class="social-card" href="https://youtube.com/@danishislamic786" target="_blank" rel="noopener"><span class="social-thumb"><img src="1777350131201.png" alt="YouTube thumbnail"></span><span><span class="social-name">YouTube</span><span class="social-sub">@danishislamic786</span></span></a>
+<a class="social-card" href="https://t.me/Danishzakie" target="_blank" rel="noopener"><span class="social-thumb"><img src="file_0000000083f482089eed3eadbf22fde4.png" alt="Telegram thumbnail"></span><span><span class="social-name">Telegram</span><span class="social-sub">@Danishzakie</span></span></a>
+<a class="social-card" href="mailto:danishfarhan900917@gmail.com"><span class="social-thumb"><img src="file_00000000903482309ec9a45b6d8b5806.png" alt="Email thumbnail"></span><span><span class="social-name">Email</span><span class="social-sub">Contact ZAKIE</span></span></a>
+<a class="social-card" href="tel:+919728288182"><span class="social-thumb"><img src="file_00000000a42071fa878bf2c0918cb3ac.png" alt="Call thumbnail"></span><span><span class="social-name">Call</span><span class="social-sub">+91 97282 88182</span></span></a>
 </div>
 </div>
 </section>
@@ -91,10 +93,10 @@ footer{text-align:center;color:#555;padding:55px 20px;font-size:10px;letter-spac
 <p class="support-note">A dedicated support card with a visual thumbnail and cinematic hover animation.</p>
 <div class="social-grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
 <a class="social-card" href="https://danishfarhan900917-cloud.github.io/ZAKIE-WEBSITE/" target="_blank" rel="noopener">
-<span class="social-thumb">Z</span><span><span class="social-name">ZAKIE WEBSITE</span><span class="social-sub">Open the public website ↗</span></span>
+<span class="social-thumb"><img src="file_00000000c7588211a824f96207acaf9d.png" alt="Website thumbnail"></span><span><span class="social-name">ZAKIE WEBSITE</span><span class="social-sub">Open the public website ↗</span></span>
 </a>
 <a class="social-card" href="mailto:danishfarhan900917@gmail.com?subject=ZAKIE%20Website%20Support" target="_blank" rel="noopener">
-<span class="social-thumb">♡</span><span><span class="social-name">SUPPORT / CONTACT</span><span class="social-sub">Email for support ↗</span></span>
+<span class="social-thumb"><img src="lv_0_20260918225847.jpg" alt="Support thumbnail"></span><span><span class="social-name">SUPPORT / CONTACT</span><span class="social-sub">Email for support ↗</span></span>
 </a>
 </div>
 </div>
